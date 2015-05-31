@@ -5,6 +5,7 @@
 .material-board {
   @include user-select(none);
   background-color: $color-bg-dark;
+  box-shadow: 0px 2px 4px rgba($black, 0.4), 0px 8px 20px rgba($black, 0.4);
   padding: 2px;
   max-width: 768px;
   margin: auto;
@@ -30,6 +31,10 @@
   &:active ,
   &.is-active {
     z-index: 2;
+  }
+
+  &--modifier {
+    @include flex(1.5);
   }
 }
 
