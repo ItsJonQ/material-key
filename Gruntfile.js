@@ -345,6 +345,31 @@ module.exports = function (grunt) {
       }
     },
 
+
+    // Various Grunt tasks...
+
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:ItsJonQ/material-key.git',
+          branch: 'gh-pages'
+        }
+      },
+      local: {
+        options: {
+          remote: '../',
+          branch: 'build'
+        }
+      }
+    },
+
+
     // Run some tasks in parallel to speed up build process
     concurrent: {
       server: [
@@ -415,6 +440,11 @@ module.exports = function (grunt) {
     'rev',
     'usemin',
     'htmlmin'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'build',
+    'buildcontrol:pages'
   ]);
 
   grunt.registerTask('default', [
