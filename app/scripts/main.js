@@ -35,17 +35,8 @@
     var $this = $(this);
     var $bound = $this.parent();
 
-    key.delay(200)
-    .queue(function() {
-      $(this).removeClass("is-active");
-      $(this).dequeue();
-    });
-
-    bound.delay(200)
-    .queue(function() {
-      $(this).removeClass("is-active");
-      $(this).dequeue();
-    });
+    $this.removeClass('is-active');
+    $bound.removeClass('is-active');
   });
 
   $(document).on('keydown', function(e) {
