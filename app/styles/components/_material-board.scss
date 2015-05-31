@@ -6,7 +6,7 @@
   @include user-select(none);
   background-color: $color-bg-dark;
   padding: 2px;
-  max-width: 360px;
+  max-width: 768px;
   margin: auto;
 
   &__row {
@@ -17,6 +17,7 @@
 }
 
 .material-board__keybound {
+  @include flex(1);
   @include transform(translateZ(0));
   @include user-select(none);
   display: inline-block;
@@ -24,7 +25,6 @@
   margin: 2px;
   padding: 0 0;
   position: relative;
-  width: 32px;
   z-index: 1;
 
   &:active ,
@@ -51,7 +51,7 @@
   padding: 0 0;
   position: absolute;
   text-align: center;
-  width: 32px;
+  width: 100%;
 
 
   &:hover {
@@ -62,13 +62,30 @@
   &:active,
   &.is-active {
     @include transition(box-shadow 0.2s ease);
-    @include transform(scale(1.2) translateX(-2px));
+    @include transform(scale(1.2) translateX(-2%));
     background-color: lighten($color-bg-dark, 8);
     box-shadow: 0 4px 8px rgba($black, 0.3), 0 8px 22px rgba($black, 0.6);
     height: 100px;
-    width: 36px;
+    width: 104%;
   }
 
+}
+
+.material-board__superscript {
+  font-size: 0.5em;
+  line-height: 1;
+  opacity: 0.4;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+
+.material-board__spacer {
+  @include flex(1);
+
+  &--half {
+    @include flex(0.5);
+  }
 }
 
 // Modifiers
