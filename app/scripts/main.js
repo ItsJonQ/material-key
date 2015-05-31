@@ -39,28 +39,28 @@
     $bound.removeClass('is-active');
   });
 
-  $(document).on('keydown', function(e) {
+  // $(document).on('keydown', function(e) {
 
-    var value = String.fromCharCode(e.keyCode).toLowerCase();
+  //   var value = String.fromCharCode(e.keyCode).toLowerCase();
 
-    var key = $('[data-key-label="'+value+'"]')
-    var bound = key.parent();
+  //   var key = $('[data-key-label="'+value+'"]')
+  //   var bound = key.parent();
 
-    key.addClass('is-active')
-    .delay(200)
-    .queue(function() {
-      $(this).removeClass("is-active");
-      $(this).dequeue();
-    });
+  //   key.addClass('is-active')
+  //   .delay(200)
+  //   .queue(function() {
+  //     $(this).removeClass("is-active");
+  //     $(this).dequeue();
+  //   });
 
-    bound.addClass('is-active')
-    .delay(200)
-    .queue(function() {
-      $(this).removeClass("is-active");
-      $(this).dequeue();
-    });
+  //   bound.addClass('is-active')
+  //   .delay(200)
+  //   .queue(function() {
+  //     $(this).removeClass("is-active");
+  //     $(this).dequeue();
+  //   });
 
-    return false;
-  });
+  //   return false;
+  // });
 
 })(jQuery);
