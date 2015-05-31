@@ -27,7 +27,8 @@
   width: 32px;
   z-index: 1;
 
-  &:active {
+  &:active ,
+  &.is-active {
     z-index: 2;
   }
 }
@@ -58,7 +59,8 @@
     color: $white;
   }
 
-  &:active {
+  &:active,
+  &.is-active {
     @include transition(box-shadow 0.2s ease);
     @include transform(scale(1.2) translateX(-2px));
     background-color: lighten($color-bg-dark, 8);
@@ -83,7 +85,8 @@
       box-shadow: 0 4px 12px rgba($black, 0.2);
     }
 
-    &:active {
+    &:active,
+    &.is-active {
       background-color: lighten($color-bg-light, 4);
       box-shadow: 0 4px 8px rgba($black, 0.1), 0 8px 22px rgba($black, 0.4);
     }
