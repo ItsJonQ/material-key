@@ -4,6 +4,9 @@
 
   $materialBoard = $('#material-board');
   $notepad = $('#notepad');
+  //touchstart or mousedown
+  var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
+  var clickEnd = ('ontouchstart' in document.documentElement)  ? 'touchend' : 'mouseup';
 
   var letters = [
   "1","2","3","4","5","6","7","8","9","0",
@@ -24,7 +27,7 @@
     // });
 });
 
-  $('[data-key-label]').on('mousedown touchstart', function() {
+  $('[data-key-label]').on(clickStart, function() {
     var $this = $(this);
     var $bound = $this.parent();
     var value = $this.data('key-label');
@@ -51,7 +54,7 @@
 
   });
 
-  $('[data-key-label]').on('mouseup touchend', function() {
+  $('[data-key-label]').on(clickEnd, function() {
     var $this = $(this);
     var $bound = $this.parent();
 
