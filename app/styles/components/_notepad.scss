@@ -13,7 +13,7 @@
   padding: 10px;
   width: 100%;
 
-  @media (max-height: 600px) {
+  @media (max-height: 600px), (max-width: 600px) {
     @include flex(1);
   }
 
