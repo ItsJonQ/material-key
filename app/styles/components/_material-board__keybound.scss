@@ -1,0 +1,50 @@
+// Components :: Material Board (Keybound)
+
+.material-board__keybound {
+  @include flex(1);
+  @include transform(translateZ(0));
+  @include user-select(none);
+  display: inline-block;
+  height: 48px;
+  margin: 2px;
+  padding: 0 0;
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    z-index: 2;
+  }
+
+  &:active,
+  &.is-active {
+    z-index: 2;
+  }
+}
+
+.material-board__keybound--modifier {
+  @include flex(1.5);
+
+  &:not(.material-board__keycap--primary) .material-board__legend {
+    opacity: 0.6;
+  }
+
+  .material-board__keycap:not(.material-board__keycap--primary) {
+    &:active,
+    &.is-active {
+      height: 48px;
+      width: 100%;
+    }
+  }
+}
+
+.material-board__keybound--space {
+  @include flex(5);
+
+  .material-board__keycap {
+    &:active,
+    &.is-active {
+      height: 48px;
+      width: 100%;
+    }
+  }
+}
