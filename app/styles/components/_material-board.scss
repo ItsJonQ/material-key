@@ -3,12 +3,14 @@
 // Default board color: Dark
 
 .material-board {
+  @include transition(bottom 0.3s ease);
   @include user-select(none);
   background-color: $color-bg-dark;
   box-shadow: $keyboard-shadow;
   max-width: $keyboard-max-width;
   margin: auto;
   padding: $keyboard-padding;
+  position: relative;
 
   &__row {
     @include align-items(center);
