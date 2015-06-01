@@ -1,0 +1,58 @@
+// Variables ::         Keyboard
+
+$keyboard-max-width:                  768px;
+$keyboard-padding:                    2px;
+$keyboard-shadow:                     0px 2px 4px rgba($black, 0.4), 0px 8px 20px rgba($black, 0.4);
+
+
+
+
+$keycap-border-radius:                2px;
+$keycap-border-round:                 50%;
+$keycap-font-size:                    22px;
+$keycap-icon-size:                    24px;
+$keycap-height-active:                100px;
+$keycap-size:                         48px;
+$keycap-width:                        100%;
+$keycap-width-active:                 104%;
+
+$keycap-transition:                   (box-shadow 0.2s ease, background-color 0.2s ease, height 0.2s ease-in, scale 0.2s ease-in);
+$keycap-transition-active:            (box-shadow 0.2s ease);
+$keycap-transform-active:             (scale(1.2) translateX(-2%));
+$keycap-primary-transform-active:     (scale(1.4) translateX(-35%));
+
+// Theme :: Dark
+$keycap-text-color:                   rgba($white, 0.6);
+$keycap-shadow:                       0 1px 2px rgba($black, 0.5);
+$keycap-shadow-hover:                 0 4px 12px rgba($black, 0.5);
+$keycap-shadow-active:                0 4px 8px rgba($black, 0.3), 0 8px 22px rgba($black, 0.6);
+
+// Theme :: Light
+$keycap-light-shadow:                 0 1px 2px rgba($black, 0.2);
+$keycap-light-shadow-hover:           0 4px 12px rgba($black, 0.2);
+$keycap-light-shadow-active:          0 4px 8px rgba($black, 0.1), 0 8px 22px rgba($black, 0.4);
+
+
+$keybound-flex-size:                  1;
+$keybound-flex-size-half:             ($keybound-flex-size / 2);
+$keybound-margin:                     2px;
+$keybound-size:                       $keycap-size;
+
+$keybound-mod-width:                  100%;
+$keybound-mod-flex-size:              1.5;
+$keybound-space-flex-size:            5;
+
+
+
+$key-legend-mod-opacity:              0.6;
+$key-legend-font-size-sm:             14px;
+
+$key-legend-space-height:             ceil($keycap-size / 2);
+$key-legend-space-opacity:            0.1;
+$key-legend-space-width:              80%;
+
+
+
+$key-legend-superscript-font-size:    0.5em;
+$key-legend-superscript-opacity:      0.4;
+$key-legend-superscript-offset:       4px;

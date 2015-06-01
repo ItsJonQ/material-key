@@ -1,0 +1,33 @@
+// Components :: Material Board (Legend)
+
+.material-board__legend {
+  &--modifier {
+    opacity: $key-legend-mod-opacity;
+  }
+
+  &--sm {
+    font-size: $key-legend-font-size-sm;
+  }
+
+  &--space {
+    @include transform(translateX(-50%) translateY(-50%));
+    background-color: $white;
+    border-radius: $keycap-border-radius;
+    display: block;
+    height: $key-legend-space-height;
+    left: 50%;
+    opacity: $key-legend-space-opacity;
+    position: absolute;
+    top: 50%;
+    width: $key-legend-space-width;
+  }
+}
+
+.material-board__superscript {
+  font-size: $key-legend-superscript-font-size;
+  line-height: 1;
+  opacity: $key-legend-superscript-opacity;
+  position: absolute;
+  right: $key-legend-superscript-offset;
+  top: $key-legend-superscript-offset;
+}

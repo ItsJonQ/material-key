@@ -6,6 +6,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 // Variables
 @import "variables/color";
+@import "variables/keyboard";
 @import "variables/typography";
 
 // Base
@@ -15,3 +16,4 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "components/material-board";
 @import "components/material-board__keybound";
 @import "components/material-board__keycap";
+@import "components/material-board__legend";
