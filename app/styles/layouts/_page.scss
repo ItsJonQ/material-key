@@ -12,7 +12,9 @@
     @include flex(1);
 
     @media (max-height: 600px) {
-      @include align-self(flex-end);
+      @include display(flex);
+      @include flex-direction(column);
+      height: 100%;
     }
   }
 }

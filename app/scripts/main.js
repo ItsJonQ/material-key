@@ -3,6 +3,7 @@
   window.APP = {};
 
   $materialBoard = $('#material-board');
+  $notepad = $('#notepad');
 
   var letters = [
   "1","2","3","4","5","6","7","8","9","0",
@@ -23,15 +24,34 @@
     // });
 });
 
-  $('[data-key-label]').on('touchstart', function() {
+  $('[data-key-label]').on('mousedown touchstart', function() {
     var $this = $(this);
     var $bound = $this.parent();
+    var value = $this.data('key-label');
+    var height = $notepad[0].scrollHeight;
+    var content = $notepad.val();
 
     $this.addClass('is-active');
     $bound.addClass('is-active');
+
+    if(value === 'enter') {
+      content = content + '\n';
+    }
+
+    else if(value === 'delete') {
+      content = content.substring(0, content.length - 1);
+    }
+
+    else {
+      content = content + value;
+    }
+
+    $notepad.val(content);
+    $notepad.scrollTop(height);
+
   });
 
-  $('[data-key-label]').on('touchend', function() {
+  $('[data-key-label]').on('mouseup touchend', function() {
     var $this = $(this);
     var $bound = $this.parent();
 
