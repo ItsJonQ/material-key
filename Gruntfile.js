@@ -357,7 +357,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'git@github.com:ItsJonQ/material-key.git',
+          remote: 'git@github.com:ItsJonQ/material-keyboard.git',
           branch: 'gh-pages'
         }
       },
